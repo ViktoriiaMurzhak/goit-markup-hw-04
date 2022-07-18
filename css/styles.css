@@ -55,9 +55,15 @@ border-bottom: 1px solid
 #ECECEC;
 }
 .main-nav{
-  display: flex;
-  align-items: center;
+display: flex;
+margin-right: 0;
 }
+
+.container.nav-contact{
+display: flex;
+}
+
+
 .logo {
 padding-top: 24px;
 padding-bottom: 25px;
@@ -127,13 +133,15 @@ color: var(--link-hover-color);
   color: var(--link-hover-color);
 }
 
-.haeder-contact {
+.haeder-contact.list{
   display: flex;
-  margin-left: auto;
+margin-left: 331px;
+
 }
 
 .haeder-contact .item + .item {
   margin-left: 50px; 
+
 }
 
 .haeder-contact .h-link {
