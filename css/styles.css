@@ -127,19 +127,21 @@ color: var(--link-hover-color);
   color: var(--accent-color);
 }
 
-.hdr-contact.list{
-  display: flex;
-margin-left: 331px;
 
+
+.hdr-contact.list{
+display: inline-flex;
+margin-left: 305px;
 }
 
+
 .hdr-contact .item + .item {
-  margin-left: 50px; 
+  margin-left: 30px; 
 
 }
 
 .hdr-contact .hdr-link {
-display: flex;
+display: inline-block;
 padding-top: 32px;
 padding-bottom: 32px;
 color: var(--primary-text-color);
@@ -149,7 +151,17 @@ font-weight: 500;
 font-size: 14px;
 line-height: 1.2;
 letter-spacing: 0.02em;
+
 }
+
+
+/* намагалася додати свг іконку */
+
+/* .hdr-contact .hdr-link::before{
+width: 16px;
+height: 16px;
+content: "";background-color: red;
+} */
 
 .hdr-contact .hdr-link:hover,
 .hdr-contact .hdr-link:focus 
@@ -160,8 +172,11 @@ color: var(--accent-color)
 /* ========ORDER======= */
 /* Эффективные решения для вашего бизнеса */
 
-.hero{
+section.hero{
 background-color: var(--primary-bg-color);
+background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg.jpg);
+background-repeat: no-repeat;
+background-position:center;
 padding-top: 200px;
 padding-bottom: 200px;
 align-items: center;
@@ -245,10 +260,53 @@ letter-spacing: 0.03em;
   margin-left: 30px;
 }
 
-.feature-list .title {
-margin-top: 0;
-margin-bottom: 10px;
+.feature-list .item::before{
+  display:block;
+  content: "";
+  height: 120px;
+}
 
+.feature-list .item::before{
+  display:block;
+  content: "";
+  height: 120px;
+}
+
+.feature-list .item::before{
+  display:block;
+  content: "";
+  height: 120px;
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--bg-another-color);
+}
+
+.icon-antena::before{
+background-image: url(../images/icons/antenna.svg);
+}
+
+.icon-clock::before{
+background-image: url(../images/icons/clock.svg)
+}
+
+.icon-diagram::before{
+background-image: url(../images/icons/diagram.svg)
+}
+
+.icon-astro::before{
+background-image: url(../images/icons/astronaut.svg)
+}
+
+.feature-list .item::before{
+  display:block;
+  content: "";
+  height: 120px;
+}
+
+.feature-list .title {
+margin-top: 30px;
+margin-bottom: 10px;
 color: var(--title-color);
 font-weight: 700;
 font-size: 14px;
@@ -264,9 +322,7 @@ text-transform: uppercase;
   background-color: var(--bg-color-wite);
   padding-bottom: 94px;
 }
-.section-title.work{
-margin-bottom: 50px;
-}
+
 
 .work-list{
   display: flex;
@@ -287,19 +343,16 @@ margin-bottom: 50px;
 }
 
 .section-title.work,
-.section-title.team{
+.section-title.team, .section-title.customers{
 margin-top: 0;
+margin-bottom: 50px;
 font-weight: 700;
 font-size: 36px;
 line-height: 1.15;
 text-align: center;
 letter-spacing: 0.03em;
-
 }
 
-.section-title.team{
- margin-bottom: 50px;
-}
 .team-list{
   display: flex;
 }
@@ -328,8 +381,7 @@ color: var(--title-color);
 }
 
 .team-text{
-
-
+margin-bottom: 16px;
 font-size: 16px;
 line-height: 1.19;
 text-align: center;
@@ -343,9 +395,49 @@ padding-top: 30px;
 padding-bottom: 30px;
 }
 
+.team-link-list{
+  display: flex;
+  padding-right: 32px;
+  padding-left: 32px;
+  justify-content: center;
+}
+
+
+
+.social{
+  display: flex; align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  fill: 
+rgba(175, 177, 184, 1);
+}
+.link-icon{
+  width: 20px;
+  height: 20px;
+  padding: 0;
+}
+
+.social:hover{
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  fill: #FFFFFF;
+}
+
+/* =====CUSTOMERS=== */
+/* Постоянные клиетны */
+
+.section.customers{
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 
 /*========FOOTER========*/
-.footer-list{
+.container.footer{
+ display: flex; 
+}
+
+.footer-box{
 padding-top: 60px;
 padding-bottom: 60px;
 background-color: var(--primary-bg-color);
@@ -373,7 +465,6 @@ text-decoration:none;
 .logo-footer:hover{
 color: var(--link-hover-color);
 }
-
 
 
 .contact-adres{
@@ -417,7 +508,57 @@ text-decoration:none;
 .contact-tel:focus{
   color: var(--link-hover-color);
 }
-/* ================= */
+
+/* footer variant 2 */
+
+.footer-link{
+  margin-left: 70px;
+  margin-bottom: 100px;
+  margin-top: 12px;
+}
+
+.footer-link-text{
+margin-bottom: 20px;
+
+font-weight: 700;
+font-size: 14px;
+line-height: 16px;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+
+color: #FFFFFF;
+}
+
+.footer-link-list .footer-link-item+.footer-link-item{
+  margin-left: 10px;
+}
+
+.footer-link-list{
+  display:flex;
+}
+
+.footer-social {
+  display: flex; align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+     fill:var(--bg-prioritet-color);
+}
+
+.footer-social:hover{
+  background-color: var(--accent-color);
+}
+
+.footer-link-icon{
+  width: 20px;
+  height: 20px;
+ ;
+
+}
+
+
 /* PORTFOLIO STYLES */
 /* ================= */
 
