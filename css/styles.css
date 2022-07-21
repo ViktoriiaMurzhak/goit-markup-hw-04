@@ -511,13 +511,20 @@ fill: var(--accent-color);
 
 /*========FOOTER========*/
 .container.footer{
- display: flex; 
+display: flex; 
+/* align-items: center; */
 }
 
 .footer-box{
 padding-top: 60px;
 padding-bottom: 60px;
 background-color: var(--primary-bg-color);
+}
+
+.adres-box{
+display: flex;
+
+
 }
 
 .logo-footer{
@@ -544,7 +551,7 @@ color: var(--link-hover-color);
 }
 
 .contact-adres{
-display: block;
+display: inline-block;
 margin-bottom: 9px;
 font-style: normal;
 font-size: 14px;
@@ -588,13 +595,11 @@ text-decoration:none;
 
 .footer-link{
   margin-left: 70px;
-  margin-bottom: 100px;
-  margin-top: 12px;
+ padding-top: 12px;
 }
 
 .footer-link-text{
 margin-bottom: 20px;
-
 font-weight: 700;
 font-size: 14px;
 line-height: 16px;
